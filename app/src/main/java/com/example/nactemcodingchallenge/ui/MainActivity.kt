@@ -24,13 +24,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
+        lifecycleScope.launch {
             repository.getStringResponse("USA")
-
-
-
-
-
+        }
 
         setContent {
             NaCTemCodingChallengeTheme {

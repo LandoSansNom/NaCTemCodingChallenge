@@ -12,7 +12,7 @@ class RepositoryImp @Inject constructor(
     private val apiCall: ApiCall
 )
     : Repository{
-    override fun getStringResponse(shortForm: String): Call<String> {
+    override suspend fun getStringResponse(shortForm: String): Call<String> {
         val stringResponse: Call<String> = apiCall.getStringResponse(shortForm)
         stringResponse.enqueue(object : Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {

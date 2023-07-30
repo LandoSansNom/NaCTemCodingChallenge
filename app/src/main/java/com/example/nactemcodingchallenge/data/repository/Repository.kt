@@ -4,5 +4,5 @@ import okhttp3.ResponseBody
 import retrofit2.Call
 
 interface Repository{
-     fun getStringResponse(shortForm: String): Call<String>
+     suspend fun getStringResponse(shortForm: String): Call<String>
 }
